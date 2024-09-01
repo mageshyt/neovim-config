@@ -26,6 +26,7 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+
 require("telescope").setup(telescope_config)
 
 -- load theme
