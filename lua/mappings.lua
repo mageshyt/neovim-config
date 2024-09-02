@@ -6,10 +6,4 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jj", "<ESC>")
-
--- cmp setup
-
-
-
-
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Alt + / to commant

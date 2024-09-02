@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 -- local tailwindConfig = require "plugins.tailwindcss"
 
 -- EXAMPLE
-local servers = { "html", "cssls","autotools_ls","tsserver","jdtls","pyright","eslint","cssls" }
+local servers = { "html", "cssls","autotools_ls","tsserver","jdtls","pyright","eslint","cssls","prismals" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config

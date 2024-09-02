@@ -11,14 +11,40 @@ return {
 end,
   },
   -- Code Runner
+  -- {
+  --   "CRAG666/code_runner.nvim",
+  --   config = true,
+  --   cmd="RunCode",
+  --   opts={
+  --     mode="better_term",
+  --   }
+  -- },
   {
-    "CRAG666/code_runner.nvim",
-    config = true,
-    cmd="RunCode",
-    opts={
-      mode="better_term",
+    "jellydn/quick-code-runner.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {
+      debug = true,
+    },
+    cmd = { "QuickCodeRunner", "QuickCodePad" },
+    keys = {
+      -- {
+      --   "<leader>cr",
+      --   ":QuickCodeRunner<CR>",
+      --   desc = "Quick Code Runner",
+      --   mode = "v",
+      -- },
+      {
+        "<leader>cp",
+        ":QuickCodePad<CR>",
+        desc = "Quick Code Pad",
+      },
+      {
+    "<leader>cr",
+    "gg0vGg$:QuickCodeRunner<CR>",
+    desc = "Quick File Code Runner",
+    mode = "n",
     }
-
+    },
   },
   {
     'norcalli/nvim-colorizer.lua',
@@ -87,7 +113,7 @@ end,
         "javascript", "typescript",
         "tsx","go" ,"rust"
   		},
-      
+
   	},
   },
   -- {
