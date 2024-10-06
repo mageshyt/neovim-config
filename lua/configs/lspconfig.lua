@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 -- local tailwindConfig = require "plugins.tailwindcss"
 
 -- EXAMPLE
-local servers = { "html", "cssls","autotools_ls","tsserver","jdtls","pyright","eslint","cssls","prismals" }
+local servers = { "html", "cssls","autotools_ls","jdtls","pyright","eslint","cssls","prismals" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -18,11 +18,11 @@ for _, lsp in ipairs(servers) do
 end
 
 -- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
+lspconfig.ts_ls.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
 lspconfig.tailwindcss.setup({
   cmd = { "npx", "tailwindcss-language-server", "--stdio" },
   filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "svelte", "vue" },
