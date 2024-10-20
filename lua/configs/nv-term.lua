@@ -2,6 +2,7 @@
 require("nvterm").setup({
   terminals = {
     shell = vim.o.shell,
+    
     list = {},
     type_opts = {
       float = {
@@ -16,6 +17,7 @@ require("nvterm").setup({
       vertical = { location = "rightbelow", split_ratio = .5 },
     }
   },
+  
   behavior = {
     autoclose_on_quit = {
       enabled = false,
@@ -24,4 +26,5 @@ require("nvterm").setup({
     close_on_exit = true,
     auto_insert = true,
   },
+  
 })

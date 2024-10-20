@@ -86,6 +86,7 @@ end,
         "prettier",
         "tailwindcss-language-server",
         "typescript-language-server",
+        "gopls"
       }
     },
   },

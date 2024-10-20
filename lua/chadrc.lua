@@ -4,6 +4,8 @@
 ---@class ChadrcConfig
 local M = {}
 
+M.lsp = {signature = false}
+
 M.base46 = {
   theme = "pastelDark",
 }
@@ -20,7 +22,15 @@ M.ui = {
 M.nvdash={
   load_on_startup=true,
   header={
+   "▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄",
+"█  █▄█  █      █       █       █       █  █ █  █",
+"█       █  ▄   █   ▄▄▄▄█    ▄▄▄█  ▄▄▄▄▄█  █▄█  █",
+"█       █ █▄█  █  █  ▄▄█   █▄▄▄█ █▄▄▄▄▄█       █",
+"█       █      █  █ █  █    ▄▄▄█▄▄▄▄▄  █   ▄   █",
+"█ ██▄██ █  ▄   █  █▄▄█ █   █▄▄▄ ▄▄▄▄▄█ █  █ █  █",
+"█▄█   █▄█▄█ █▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄█ █▄▄█",
     
+  "                                             ",  
   },
   buttons = {
       { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
@@ -44,6 +54,10 @@ M.nvdash={
       { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
     },
 }
+
+
+
+
 M.cpilot = {
   i = {
     ["<C-l>"] = {
