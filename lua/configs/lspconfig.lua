@@ -2,10 +2,11 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
+local util = require "lspconfig/util"
 -- local tailwindConfig = require "plugins.tailwindcss"
 
 -- EXAMPLE
-local servers = { "html", "cssls","autotools_ls","jdtls","pyright","eslint","cssls","prismals" ,"gopls"}
+local servers = { "html", "cssls","autotools_ls","jdtls","pyright","eslint","cssls","prismals" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -38,4 +39,22 @@ lspconfig.pyright.setup {
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
   filetypes = { "python" },
+}
+
+-- go
+lspconfig.gopls.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  cmd = {"gopls"},
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
 }
