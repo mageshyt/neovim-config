@@ -27,12 +27,6 @@ end,
     },
     cmd = { "QuickCodeRunner", "QuickCodePad" },
     keys = {
-      -- {
-      --   "<leader>cr",
-      --   ":QuickCodeRunner<CR>",
-      --   desc = "Quick Code Runner",
-      --   mode = "v",
-      -- },
       {
         "<leader>cp",
         ":QuickCodePad<CR>",
@@ -86,7 +80,7 @@ end,
         "prettier",
         "tailwindcss-language-server",
         "typescript-language-server",
-        "gopls"
+        "gopls",
       }
     },
   },
