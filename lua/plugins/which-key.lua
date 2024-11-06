@@ -9,6 +9,10 @@ return {
         name = "Git",
       },
       {
+        "<leader>s",
+        name = "Session",
+      },
+      {
         "<leader>c",
         name = "Code",
       },

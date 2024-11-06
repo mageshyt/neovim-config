@@ -53,6 +53,10 @@ vim.cmd[[ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatop
 
 
 -- Telescope
-vim.keymap.set('n','<leader>ft',':TodoTelescope<CR>',{desc = 'Open TODO Telescope'})
+keymap.set('n','<leader>ft',':TodoTelescope<CR>',{desc = 'Open TODO Telescope'})
 
--- CODE
+-- NOICE
+
+keymap.set('n','<leader>nd','<cmd>NoiceDismiss<CR>',{desc = 'Dissmiss noice'})
+
+

@@ -10,7 +10,6 @@ local keymap = vim.keymap
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
 -- BACKUPS
 opt.swapfile = false
 opt.backup = false
