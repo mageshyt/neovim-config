@@ -3,13 +3,6 @@ return {
     "stevearc/conform.nvim",
   },
   {
-    "nvimtools/none-ls.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
-  {
     "jellydn/quick-code-runner.nvim",
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {
@@ -70,50 +63,6 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "gopls",
-      },
-    },
-  },
-  -- Auto Tag
-  {
-    "windwp/nvim-ts-autotag",
-    ft = {
-      "javascript",
-      "typescript",
-      "javascriptreact",
-      "typescriptreact",
-      "html",
-    },
-    config = function()
-      require("nvim-ts-autotag").setup {
-        opts = {
-          -- Defaults
-          enable_close = true, -- Auto close tags
-          enable_rename = true, -- Auto rename pairs of tags
-          enable_close_on_slash = false, -- Auto close on trailing </
-        },
-        per_filetype = {
-          ["html"] = {
-            enable_close = false,
-          },
-        },
-      }
-    end,
-  },
-  -- TREE SITTER
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "go",
-        "rust",
       },
     },
   },
