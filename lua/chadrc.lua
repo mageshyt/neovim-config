@@ -8,8 +8,9 @@ M.lsp = { signature = false }
 M.base46 = {
   theme = "pastelDark",
   transparency = true,
-
 }
+
+
 M.ui = {
 
   statusline = {
