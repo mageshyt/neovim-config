@@ -5,7 +5,7 @@ require('code_runner').setup({
       "javac $fileName &&",
       "java $fileNameWithoutExt"
     },
-    python = "python3 -u '$dir/$fileName'",
+    python = "python -u '$dir/$fileName'",
     typescript = "deno run",
     rust = {
       "cd $dir &&",
