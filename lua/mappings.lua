@@ -51,19 +51,26 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- close all buffers
 keymap.set("n", "<leader>bd", "<cmd>bufdo bd<CR>", { desc = "Close all buffers" })
+
 -- diable auto comment
 vim.cmd[[ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o ]]
+
 
 
 -- Telescope
 keymap.set('n','<leader>ft',':TodoTelescope<CR>',{desc = 'Open TODO Telescope'})
 
--- NOICE
-
-keymap.set('n','<leader>nd','<cmd>NoiceDismiss<CR>',{desc = 'Dissmiss noice'})
 
 
-vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
-vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
-vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
-vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+
+
+-- undoTree
+keymap.set('n','<leader>u',vim.cmd.undotreeToggle,{desc = 'toggle undo tree'})
+
+-- move lines
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
