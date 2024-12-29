@@ -3,27 +3,6 @@ return {
     "stevearc/conform.nvim",
   },
   {
-    "jellydn/quick-code-runner.nvim",
-    dependencies = { "MunifTanjim/nui.nvim" },
-    opts = {
-      debug = true,
-    },
-    cmd = { "QuickCodeRunner", "QuickCodePad" },
-    keys = {
-      {
-        "<leader>cp",
-        ":QuickCodePad<CR>",
-        desc = "Quick Code Pad",
-      },
-      {
-        "<leader>cr",
-        "gg0vGg$:QuickCodeRunner<CR>",
-        desc = "Quick File Code Runner",
-        mode = "n",
-      },
-    },
-  },
-  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup()
