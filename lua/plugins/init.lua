@@ -41,6 +41,7 @@ return {
         "prettier",
         "tailwindcss-language-server",
         "typescript-language-server",
+        "css-lsp",
         "gopls",
         "mypy",
         "ruff",

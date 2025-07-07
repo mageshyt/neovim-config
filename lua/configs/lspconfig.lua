@@ -6,7 +6,7 @@ local util = require "lspconfig/util"
 -- local tailwindConfig = require "plugins.tailwindcss"
 
 -- EXAMPLE
-local servers = { "html", "cssls","autotools_ls","jdtls","pyright","eslint","cssls","prismals" }
+local servers = { "html", "cssls", "autotools_ls", "jdtls", "pyright", "eslint", "cssls", "prismals" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -24,13 +24,13 @@ lspconfig.ts_ls.setup {
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
 }
-lspconfig.tailwindcss.setup({
+lspconfig.tailwindcss.setup {
   cmd = { "npx", "tailwindcss-language-server", "--stdio" },
   filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "svelte", "vue" },
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
-})
+}
 
 -- Pyright config
 
@@ -45,7 +45,7 @@ lspconfig.pyright.setup {
 lspconfig.gopls.setup {
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
-  cmd = {"gopls"},
+  cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
   settings = {

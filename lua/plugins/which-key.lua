@@ -32,7 +32,6 @@ return {
         "<leader>?",
         name = "Help",
       },
-      
     },
   },
 
