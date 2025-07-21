@@ -31,7 +31,7 @@ M.ui = {
 }
 
 M.nvdash = {
-  load_on_startup = true,
+  load_on_startup = false,
   header = {
     "▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄",
     "█  █▄█  █      █       █       █       █  █ █  █",
@@ -49,7 +49,6 @@ M.nvdash = {
     { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
     { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
     { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
-
     { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
 
     {

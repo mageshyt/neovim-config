@@ -16,7 +16,7 @@ return {
   ---@module "auto-session"
   ---@type AutoSession.Config
   opts = {
-    suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/Volumes/CodeHub/','/Volumes/Project-2/','/Volumes/Project/' },
+    suppressed_dirs = { '~/', '~/Projects', '/Volumes/Project-2/','/Volumes/Project/' },
     -- log_level = 'debug',
     session_lens = {
       -- If load_on_setup is false, make sure you use `:SessionSearch` to open the picker as it will initialize everything first

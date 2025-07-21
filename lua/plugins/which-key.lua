@@ -2,6 +2,7 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
 
+
   opts = {
     spec = {
       {
@@ -32,7 +33,14 @@ return {
         "<leader>?",
         name = "Help",
       },
-      
+      {
+        "<leader>t",
+        name = "Tabs",
+      },
+      {
+        "<leader>w",
+        name = "workspace",
+      }
     },
   },
 
