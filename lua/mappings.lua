@@ -67,7 +67,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- clipboard toogle
 
-local clipboard_toggle = false
+local clipboard_toggle = true
 vim.keymap.set("n", "<leader>cb", function()
   if clipboard_enabled then
     vim.opt.clipboard = ""
@@ -78,3 +78,16 @@ vim.keymap.set("n", "<leader>cb", function()
   end
   clipboard_enabled = not clipboard_enabled
 end, { desc = "Toggle clipboard mode" })
+
+
+-- register
+vim.keymap.set('n', '<leader>rg', ':registers<CR>', { desc = "Show all registers" })
+
+vim.keymap.set('n', '<leader>rr', function()
+  for reg = string.byte('a'), string.byte('z') do
+    vim.fn.setreg(string.char(reg), '')
+  end
+  print("All registers a–z cleared")
+end, { desc = "Reset all a-z registers" })
+
+

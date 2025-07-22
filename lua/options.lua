@@ -49,4 +49,4 @@ opt.splitbelow = true
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- CLIPBOARD
-opt.clipboard= "" 
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
