@@ -72,7 +72,7 @@ nomap("n", "<leader>pt")
 
 -- clipboard toogle
 
-local clipboard_toggle = false
+local clipboard_enabled = true
 vim.keymap.set("n", "<leader>cb", function()
   if clipboard_enabled then
     vim.opt.clipboard = ""
