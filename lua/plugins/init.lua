@@ -48,5 +48,5 @@ return {
         "black",
       },
     },
-  },
+ { import = "nvchad.blink.lazyspec" } },
 }

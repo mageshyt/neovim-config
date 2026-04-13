@@ -17,7 +17,7 @@ local mappings = {
     function()
       terminal.toggle "vertical"
     end,
-  },
+  }
 }
 local opts = { noremap = true, silent = true }
 for _, mapping in ipairs(mappings) do

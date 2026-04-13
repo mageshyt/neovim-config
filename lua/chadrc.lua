@@ -6,13 +6,12 @@ local M = {}
 
 M.lsp = { signature = false }
 M.base46 = {
-  theme = "pastelDark",
+  theme = "material-deep-ocean",
   transparency = true,
 }
 
 
 M.ui = {
-
   statusline = {
     theme = "minimal", -- default/vscode/vscode_colored/minimal
     separator_style = "round",
@@ -35,7 +34,7 @@ M.nvdash = {
   header = {
     "▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄",
     "█  █▄█  █      █       █       █       █  █ █  █",
-    "█       █  ▄   █   ▄▄▄▄█    ▄▄▄█  ▄▄▄▄▄█  █▄█  █",
+    "█       █  ▄   █   ▄▄▄▄█    ▄▄▄█  ▄▄▄▄▄█  █▄█  █", 
     "█       █ █▄█  █  █  ▄▄█   █▄▄▄█ █▄▄▄▄▄█       █",
     "█       █      █  █ █  █    ▄▄▄█▄▄▄▄▄  █   ▄   █",
     "█ ██▄██ █  ▄   █  █▄▄█ █   █▄▄▄ ▄▄▄▄▄█ █  █ █  █",
@@ -59,13 +58,14 @@ M.nvdash = {
       end,
       hl = "NvDashLazy",
       no_gap = true,
+      
     },
 
     { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
   },
 }
 
-M.cpilot = {
+M.copilot = {
   i = {
     ["<C-l>"] = {
       function()
